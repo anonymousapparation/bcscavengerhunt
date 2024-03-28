@@ -18,7 +18,7 @@
     }
     #message {
       display: none;
-      font-size: 36px;
+      font-size: 24px;
       background-color: #e0dca8;
       color: black;
     }
@@ -33,9 +33,9 @@
   </style>
 </head>
 <body>
-  <div id="counter">0</div>
+  <div id="counter"></div>
   <button id="clickBtn">Click Me 1000 Times!</button>
-  <div id="message">Enjoy: 8bd7ec62d654d2d17997654ae497e191124534b9e61990eddec44854df39fc33</div>
+  <div id="message">8bd7ec62d654d2d17997654ae497e191124534b9e61990eddec44854df39fc33</div>
 
   <script>
     const clickBtn = document.getElementById('clickBtn');
@@ -46,10 +46,10 @@
 
     clickBtn.addEventListener('click', () => {
       clickCount++;
-      if (clickCount > 0 && clickCount < 10) {
+      if (clickCount > 0 && clickCount < 1000) {
         clickBtn.textContent = "   " + clickCount + "   ";
       }
-      if (clickCount >= 10) {
+      if (clickCount >= 1000) {
         clickBtn.style.display = 'none';
         message.style.display = 'block';
       }
