@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Counter</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('background.jpg'); /* Path to your large background image */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #counter {
+      font-size: 24px;
+    }
+    #message {
+      display: none;
+      font-size: 36px;
+      color: white;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="counter">0</div>
+  <button id="clickBtn">Click Me!</button>
+  <div id="message">Congratulations! You clicked 1000 times!</div>
+
+  <script>
+    const clickBtn = document.getElementById('clickBtn');
+    const counter = document.getElementById('counter');
+    const message = document.getElementById('message');
+    
+    let clickCount = 0;
+
+    clickBtn.addEventListener('click', () => {
+      clickCount++;
+      counter.textContent = clickCount;
+      
+      if (clickCount >= 1000) {
+        clickBtn.style.display = 'none';
+        message.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
