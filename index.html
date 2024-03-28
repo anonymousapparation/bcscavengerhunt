@@ -47,7 +47,7 @@
     clickBtn.addEventListener('click', () => {
       clickCount++;
       if (clickCount > 0 && clickCount < 10) {
-        clickBtn.textContent = clickCount;
+        clickBtn.textContent = "   " + clickCount + "   ";
       }
       if (clickCount >= 10) {
         clickBtn.style.display = 'none';
