@@ -8,7 +8,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-image: url('background.jpg'); /* Path to your large background image */
+      background-image: url('https://i.pinimg.com/originals/9e/96/c4/9e96c4cf5a360581e0d8ef7b1e738844.jpg');
       background-size: cover;
       background-position: center;
       height: 100vh;
@@ -22,7 +22,7 @@
     #message {
       display: none;
       font-size: 36px;
-      color: white;
+      color: black;
     }
     button {
       padding: 10px 20px;
@@ -50,7 +50,7 @@
       clickCount++;
       counter.textContent = clickCount;
       
-      if (clickCount >= 1000) {
+      if (clickCount >= 10) {
         clickBtn.style.display = 'none';
         message.style.display = 'block';
       }
